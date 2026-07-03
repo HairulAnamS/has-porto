@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from 'react'
 import CardToolkit from './component/CardToolkit'
 import CardProject from './component/CardProject'
 
-import photoImage from './assets/photo.png';
+import photoImage from './assets/photo.jpeg';
 import igIcon from './assets/ig.png';
 import fbIcon from './assets/fb.png';
 import reactIcon from './assets/react.png';
@@ -82,7 +82,7 @@ const App = () => {
         <div className='h-[75px] bg-[#1a1a1a] flex justify-end items-center p-4'>
           <h1 className="font-bold text-white px-8 text-xl"
             onClick={() => aboutRef.current?.scrollIntoView({ behavior: 'smooth' })}>
-            About Me
+            Tentang Saya
           </h1>
           <h1 className="font-bold text-white px-8 text-xl"
             onClick={() => toolkitRef.current?.scrollIntoView({ behavior: 'smooth' })}>
@@ -102,44 +102,51 @@ const App = () => {
         >
           <div className='flex flex-col md:flex-row w-[90%] h-[80%] justify-around gap-8'>
 
-            <div
-              className="flex-1 flex items-center justify-center relative group"
-              onMouseMove={(e) => {
-                const rect = e.currentTarget.getBoundingClientRect();
-                const x = e.clientX - rect.left; // posisi mouse relatif pada gambar
-                setLineX(x);
-              }}
-              onMouseLeave={() => setLineX(null)}
-            >
-              <img
-                src={photoImage}
-                alt="photo"
-                className="w-full h-full object-cover"
-              />
+            {/* Lapis 1: Container Luar (Menangani padding responsif) */}
+            <div className="flex-1 flex items-center justify-center p-4 md:p-28">
 
-              {/* Garis vertical mengikuti mouse */}
-              {lineX !== null && (
-                <div
-                  className="absolute top-0 h-full w-3 transition-all duration-75"
-                  style={{
-                    left: `${lineX - 5}px`,
-                    background: "linear-gradient(to bottom, rgba(0, 208, 255, 0.35), rgba(58, 242, 255, 0.45), rgba(136, 255, 255, 0.35))",
-                    boxShadow: "0 0 15px rgba(58, 242, 255, 0.5), 0 0 30px rgba(58, 242, 255, 0.3)",
-                    opacity: 1
-                  }}
-                ></div>
-              )}
+              {/* Lapis 2: Container Dalam (Menangkap posisi mouse & mengunci garis tepat di ukuran gambar) */}
+              <div
+                className="relative w-full h-full group"
+                onMouseMove={(e) => {
+                  const rect = e.currentTarget.getBoundingClientRect();
+                  const x = e.clientX - rect.left;
+                  setLineX(x);
+                }}
+                onMouseLeave={() => setLineX(null)}
+              >
+                {/* Gambar sekarang bersih tanpa padding bawaan */}
+                <img
+                  src={photoImage}
+                  alt="photo"
+                  className="w-full h-full object-cover"
+                />
+
+                {/* Garis vertikal otomatis terbatasi oleh ukuran gambar asli */}
+                {lineX !== null && (
+                  <div
+                    className="absolute top-0 h-full w-3 transition-all duration-75"
+                    style={{
+                      left: `${lineX - 5}px`,
+                      background: "linear-gradient(to bottom, rgba(0, 208, 255, 0.35), rgba(58, 242, 255, 0.45), rgba(136, 255, 255, 0.35))",
+                      boxShadow: "0 0 15px rgba(58, 242, 255, 0.5), 0 0 30px rgba(58, 242, 255, 0.3)",
+                      opacity: 1
+                    }}
+                  ></div>
+                )}
+              </div>
+
             </div>
 
 
             <div className='flex-1 flex items-center justify-start p-4'>
               <div className='flex flex-col'>
-                <h1 className="font-poppins text-xl font-bold font-italic text-white">ABOUT PERSONAL</h1>
-                <p className="text-5xl font-bold text-gray-200">Hello, Im Michael Jackson</p>
+                {/* <h1 className="font-poppins text-xl font-bold font-italic text-white">TENTANG SAYA</h1> */}
+                <p className="text-5xl font-bold text-gray-200">Hallo, Saya Hairul Anam S</p>
                 <div className="border-t-4 border-white my-4 w-1/4"></div>
-                <p className="text-sm text-gray-300">I am a dedicated and versatile Software Developer with over 5 years of experience in building and maintaining applications across desktop, web, and Android platforms. My expertise spans the full software development lifecycle — from system analysis and UI design to coding, testing, and deployment. I have a solid background in creating efficient, reliable, and user-friendly solutions using modern technologies and clean coding practices. Passionate about continuous learning and innovation, I enjoy transforming complex requirements into practical, high-performing applications that enhance user experience and business productivity.</p>
+                <p className="text-lg text-gray-300">Saya adalah seorang Software Developer yang memiliki pengalaman dalam merancang dan mengembangkan aplikasi desktop, web, serta solusi berbasis hardware dan Internet of Things (IoT). Saya terbiasa membangun sistem mulai dari perancangan database, pengembangan aplikasi, hingga integrasi dengan perangkat keras untuk menghasilkan solusi yang efisien, andal, dan sesuai dengan kebutuhan pengguna. Saya percaya bahwa dunia teknologi terus berkembang, sehingga saya selalu antusias mempelajari teknologi baru dan terbuka terhadap tantangan baru. Dengan semangat belajar yang tinggi dan perhatian terhadap kualitas, saya berkomitmen untuk menciptakan solusi yang efisien, inovatif, dan memberikan nilai bagi setiap proyek yang saya kerjakan.</p>
 
-                <p className="text-5xl font-bold mt-8 text-gray-200">Michael Jackson</p>
+                <p className="text-5xl font-bold mt-8 text-gray-200">Software Developer</p>
                 <div className='flex justify-start m-4 gap-4'>
                   <img
                     src={igIcon}
@@ -171,7 +178,7 @@ const App = () => {
 
           <div className='w-full'>
             <h1 className='text-2xl ml-10 mt-6 text-white font-bold'>
-              My Toolkit
+              Toolkit
             </h1>
           </div>
           {/* <div className="grid grid-cols-3 md:grid-cols-6 gap-[2%] w-[75%] place-items-center"> */}
@@ -196,7 +203,7 @@ const App = () => {
 
         <div id="projectSection" ref={projectRef} className='min-h-screen bg-black flex flex-col justify-start items-center'>
           <h1 className='text-3xl mt-10 text-white font-bold'>
-            My Project
+            Project
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-[1%] w-full flex-1 place-items-center">
 
