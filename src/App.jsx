@@ -10,13 +10,13 @@ import mysqlIcon from './assets/mysql.png';
 import arduinoIcon from './assets/arduino.png';
 import iotIcon from './assets/iot.png';
 import tailwindIcon from './assets/tailwind.png';
-import jsIcon from './assets/js.png';
+import expressIcon from './assets/express-js.png';
 import delphiIcon from './assets/delphi.png';
 import flutterIcon from './assets/flutter.png';
 import sqlIcon from './assets/sql.png';
 import pythonIcon from './assets/python.png';
 import cIcon from './assets/c.png';
-import corelIcon from './assets/corel.png';
+import postmanIcon from './assets/postman.png';
 
 import iot1 from './assets/project/iot1.jpg';
 import iot2 from './assets/project/iot2.jpg';
@@ -36,7 +36,7 @@ const App = () => {
 
   const toolkitItems = [
     { icon: reactIcon, label: "React" },
-    { icon: jsIcon, label: "Javascript" },
+    { icon: expressIcon, label: "Express" },
     { icon: tailwindIcon, label: "Tailwind" },
     { icon: mysqlIcon, label: "MySQL" },
     { icon: arduinoIcon, label: "Arduino" },
@@ -46,7 +46,7 @@ const App = () => {
     { icon: sqlIcon, label: "SQL Server" },
     { icon: pythonIcon, label: "Python" },
     { icon: cIcon, label: "C#" },
-    { icon: corelIcon, label: "Corel" },
+    { icon: postmanIcon, label: "Postman" },
   ]
 
 
@@ -80,15 +80,15 @@ const App = () => {
       <div className='w-full flex flex-col justify-center rounded-lg shadow-lg'>
 
         <div className='h-[75px] bg-[#1a1a1a] flex justify-end items-center p-4'>
-          <h1 className="font-bold text-white px-8 text-xl"
+          <h1 className="font-bold text-white px-8 text-base md:text-lg"
             onClick={() => aboutRef.current?.scrollIntoView({ behavior: 'smooth' })}>
             Tentang Saya
           </h1>
-          <h1 className="font-bold text-white px-8 text-xl"
+          <h1 className="font-bold text-white px-8 text-base md:text-lg"
             onClick={() => toolkitRef.current?.scrollIntoView({ behavior: 'smooth' })}>
             Toolkit
           </h1>
-          <h1 className="font-bold text-white px-8 text-xl"
+          <h1 className="font-bold text-white px-8 text-base md:text-lg"
             onClick={() => projectRef.current?.scrollIntoView({ behavior: 'smooth' })}>
             Project
           </h1>
@@ -142,11 +142,11 @@ const App = () => {
             <div className='flex-1 flex items-center justify-start p-4'>
               <div className='flex flex-col'>
                 {/* <h1 className="font-poppins text-xl font-bold font-italic text-white">TENTANG SAYA</h1> */}
-                <p className="text-5xl font-bold text-gray-200">Hallo, Saya Hairul Anam S</p>
+                <p className="text-4xl md:text-5xl font-bold text-gray-200">Hallo, Saya Hairul Anam S</p>
                 <div className="border-t-4 border-white my-4 w-1/4"></div>
-                <p className="text-lg text-gray-300">Saya adalah seorang Software Developer yang memiliki pengalaman dalam merancang dan mengembangkan aplikasi desktop, web, serta solusi berbasis hardware dan Internet of Things (IoT). Saya terbiasa membangun sistem mulai dari perancangan database, pengembangan aplikasi, hingga integrasi dengan perangkat keras untuk menghasilkan solusi yang efisien, andal, dan sesuai dengan kebutuhan pengguna. Saya percaya bahwa dunia teknologi terus berkembang, sehingga saya selalu antusias mempelajari teknologi baru dan terbuka terhadap tantangan baru. Dengan semangat belajar yang tinggi dan perhatian terhadap kualitas, saya berkomitmen untuk menciptakan solusi yang efisien, inovatif, dan memberikan nilai bagi setiap proyek yang saya kerjakan.</p>
+                <p className="text-sm md:text-base text-gray-300">Saya adalah seorang Software Developer yang memiliki pengalaman dalam merancang dan mengembangkan aplikasi desktop, web, serta solusi berbasis hardware dan Internet of Things (IoT). Saya terbiasa membangun sistem mulai dari perancangan database, pengembangan aplikasi, hingga integrasi dengan perangkat keras untuk menghasilkan solusi yang efisien, andal, dan sesuai dengan kebutuhan pengguna. Saya percaya bahwa dunia teknologi terus berkembang, sehingga saya selalu antusias mempelajari teknologi baru dan terbuka terhadap tantangan baru. Dengan semangat belajar yang tinggi dan perhatian terhadap kualitas, saya berkomitmen untuk menciptakan solusi yang efisien, inovatif, dan memberikan nilai bagi setiap proyek yang saya kerjakan.</p>
 
-                <p className="text-5xl font-bold mt-8 text-gray-200">Software Developer</p>
+                <p className="text-4xl md:text-5xl font-bold mt-8 text-gray-200">Software Developer</p>
                 <div className='flex justify-start m-4 gap-4'>
                   <img
                     src={igIcon}
@@ -240,9 +240,9 @@ const App = () => {
           </div>
         </div>
 
-        <div className='h-[75px] bg-[#1a1a1a] flex justify-center items-center'>
-          <h1 className="font-bold text-white">
-            Footer
+        <div className='h-[75px] bg-black flex justify-center items-center'>
+          <h1 className="font-bold text-white/50 text-xs">
+            © 2026 Hairul Anam S
           </h1>
         </div>
       </div>

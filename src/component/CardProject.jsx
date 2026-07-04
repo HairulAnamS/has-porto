@@ -69,10 +69,10 @@ const CardProject = ({ files, label, type, deskripsi }) => {
             )}
 
             <div className='flex flex-col justify-start'>
-                <p className="text-2xl font-medium text-white mt-3">
+                <p className="text-xl font-medium text-white mt-3">
                     {label}
                 </p>
-                <p className="text-xl font-normal text-white mt-3">
+                <p className="text-base font-normal text-white mt-3">
                     {deskripsi}
                 </p>
             </div>

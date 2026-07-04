@@ -8,7 +8,7 @@ const CardToolkit = ({ icon, label }) => {
                 alt={label}
                 className="w-16 h-16 mb-2 object-contain transition-transform duration-300 ease-in-out group-hover:scale-110"
             />
-            <p className="text-xl font-medium text-white transition-transform duration-300 ease-in-out group-hover:scale-105 group-hover:text-white">{label}</p>
+            <p className="text-lg font-medium text-white transition-transform duration-300 ease-in-out group-hover:scale-105 group-hover:text-white">{label}</p>
         </div>
     )
 }
