@@ -18,12 +18,13 @@ import pythonIcon from './assets/python.png';
 import cIcon from './assets/c.png';
 import postmanIcon from './assets/postman.png';
 
-import iot1 from './assets/project/iot1.jpg';
-import iot2 from './assets/project/iot2.jpg';
-import iot3 from './assets/project/iot3.jpg';
+import toko1 from './assets/project/toko1.png';
+import toko2 from './assets/project/toko2.png';
+import toko3 from './assets/project/toko3.png';
+import toko4 from './assets/project/toko4.png';
+import toko5 from './assets/project/toko5.png';
+import toko6 from './assets/project/toko6.png';
 import video1 from './assets/project/video2.mp4'
-
-
 
 const App = () => {
   const aboutRef = useRef(null)
@@ -216,9 +217,10 @@ const App = () => {
             >
               <CardProject
                 type="image"
-                label="Gallery Project"
-                files={[iot1, iot2, iot3]}
-                deskripsi="Ini adalah project pertama saya, sistem akurasi payload untuk memantau atau monitoring keadaan rumah"
+                label="Toko Kita"
+                files={[toko1, toko2, toko3, toko4, toko5, toko6]}
+                deskripsi="Aplikasi desktop untuk mengelola proses jual beli barang secara terintegrasi, mulai dari transaksi pembelian, penjualan, hingga pengelolaan persediaan. Sistem dilengkapi dengan dashboard interaktif untuk memantau performa penjualan harian maupun bulanan, serta memberikan informasi stok barang yang mendekati batas minimum sehingga memudahkan pengambilan keputusan.
+                           Selain itu, aplikasi menyediakan laporan kartu stok untuk menelusuri riwayat pergerakan barang (stok masuk dan keluar) secara detail, serta laporan analisis laba rugi per produk guna membantu evaluasi kinerja penjualan dan profitabilitas bisnis."
               />
             </div>
 
