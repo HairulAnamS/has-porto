@@ -25,6 +25,11 @@ import toko4 from './assets/project/toko4.png';
 import toko5 from './assets/project/toko5.png';
 import toko6 from './assets/project/toko6.png';
 import video1 from './assets/project/video2.mp4'
+import inspeksi1 from './assets/project/inspeksi1.png';
+import inspeksi2 from './assets/project/inspeksi2.png';
+import inspeksi3 from './assets/project/inspeksi3.png';
+import inspeksi4 from './assets/project/inspeksi4.png';
+import inspeksi5 from './assets/project/inspeksi5.png';
 
 const App = () => {
   const aboutRef = useRef(null)
@@ -225,6 +230,36 @@ const App = () => {
             </div>
 
             {/* Card kanan */}
+            <div
+              className={`
+              transition-all duration-700
+              ${showProject ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}
+            `}
+            >
+              <CardProject
+                type="video"
+                label="Demo Project"
+                files={video1}
+                deskripsi="Ini adalah project pertama saya, sistem akurasi payload untuk memantau atau monitoring keadaan rumah"
+              />
+            </div>
+
+            {/* Card kiri 2 */}
+            <div
+              className={`
+              transition-all duration-700
+              ${showProject ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}
+            `}
+            >
+              <CardProject
+                type="image"
+                label="Inspeksi Kendaraan"
+                files={[inspeksi1, inspeksi2, inspeksi3, inspeksi4, inspeksi5]}
+                deskripsi="Aplikasi WebView untuk inspeksi kendaraan sebelum beroperasi yang dirancang untuk mendukung proses pemeriksaan armada secara digital. Sistem dilengkapi dengan autentikasi login, formulir inspeksi yang terstruktur berdasarkan beberapa kategori pemeriksaan, serta validasi data untuk memastikan setiap item inspeksi terdokumentasi dengan baik. Setelah proses inspeksi selesai, aplikasi dapat menghasilkan dan mencetak laporan hasil pemeriksaan sebagai dokumentasi dan bukti kelayakan kendaraan sebelum digunakan. Solusi ini membantu meningkatkan efisiensi proses inspeksi, meminimalkan penggunaan formulir kertas, serta mempermudah monitoring dan pencatatan riwayat inspeksi kendaraan."
+              />
+            </div>
+
+            {/* Card kanan 2 */}
             <div
               className={`
               transition-all duration-700
